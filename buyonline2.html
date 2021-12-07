@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Buy Online</title>
+    <style>
+        main{
+            background-color:rgb(230, 234, 253); 
+            width: 70%; 
+            margin-left: auto; 
+            margin-right: auto;
+            margin-top: 3%;
+        }
+        table{
+            width: 80%; 
+            margin-left: auto; 
+            margin-right: auto; 
+            margin-top: 5%; 
+            margin-bottom: 5%;
+        }
+        .d button{
+            height: 35px;
+            width: 250px;
+            margin-left: 35%;
+            margin-top: 3%;
+            margin-bottom: 3%;
+            background-color: lightgreen;
+            border-radius: 5px;
+            font-family:'Times New Roman', Times, serif; 
+            font-size: 20px; 
+            color: midnightblue;
+        }
+        .d dialog{
+            border-radius: 2px;
+            border-color: blue;
+            color: blue;
+            background: lightgreen;
+            width: 250px;
+            height: 60px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 40px;
+            margin-top: -350px;
+        }
+        fieldset{
+            background: rgb(209, 237, 255);
+            width: 80%; 
+            margin-left: auto; 
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body style="background-color: lightgoldenrodyellow;">
+    <main>
+        <fieldset>
+            <legend><h3>Payment Methods</h3></legend>
+            <input type="radio" name="pay"><h3 style="display: inline;">Debit or Credit Card</h3> <br><br>
+            <input type="radio" name="pay"><h3 style="display: inline;">Cash</h3> <br><br>
+        </fieldset>
+        <table>
+            <div class="d1">
+                <tr>
+                    <td>First Name<br><input type="text" style="border-radius: 1px; border: darkgray; background-color: white; height: 35px; width: 320px;"></td>
+                    <td>Last Name<br><input type="text" style="border-radius: 1px; border: darkgray; background-color: white; height: 35px; width: 320px;"></td>
+                </tr>
+                <tr>
+                    <td>Credit Card Number<br><input type="number" maxlength="16" placeholder="**** **** **** ****" style="border-radius: 1px; border: darkgray; background-color: white; height: 35px; width: 320px;"></td>
+                    <td>Scurity Code<br><input type="number" placeholder="CVC" maxlength="3" min="100" max="999" style="border-radius: 1px; border: darkgray; background-color: white; height: 35px; width: 320px;">
+                </tr>
+                <tr>
+                    <td>Card Expiration<br><input type="text" maxlength="5" placeholder="MM/YY" style="border-radius: 1px; border: darkgray; background-color: white; height: 35px; width: 320px;"></td>
+                </tr>
+            </div>
+        </table>
+        <hr>
+        <div class="d">
+            <button onclick="showDialog()">Submit Order</button>
+            <dialog id="myDialog">Order submited</dialog>
+        </div>
+        <script>
+            var x = document.getElementById("myDialog"); 
+            
+            function showDialog() { 
+              x.show(); 
+            }  
+        </script>
+    </main>
+</body>
+</html>
