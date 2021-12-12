@@ -78,3 +78,278 @@ table tr, td{
     border: 1px solid lightgray;
     border-radius: 5px;
 }
+.fotografit{
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.rubrika{
+    border: 1px solid lightgray;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 380px;
+    align-items: center;
+}
+.img1{
+    width: 100%;
+    height: 75%;
+    background-image: url("Microsoft\ Surface\ Book3.jpg");
+    background-size: 100% 100%;
+}
+.Cmimi{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: darkgray;
+}
+.cmimi, h3{
+    color: darkred;
+}
+.rubrika1{
+    border: 1px solid lightgray;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 380px;
+    align-items: center;
+}
+.img2{
+    width: 100%;
+    height: 80%;
+    background-image: url("Apple\ iMac.jpg");
+    background-size: 100% 100%;
+}
+.rubrika2{
+    border: 1px solid lightgray;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 380px;
+    align-items: center;
+}
+.img3{
+    width: 100%;
+    height: 75%;
+    background-image: url("Lenovo\ IdeaPad.jpg");
+    background-size: 100% 100%;
+}
+.rubrika3{
+    border: 1px solid lightgray;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 380px;
+    align-items: center;
+}
+.img4{
+    width: 70%;
+    height: 75%;
+    background-image: url("Alfa\ Gamer.jpg");
+    background-size: 100% 100%;
+}
+.rubrika4{
+    border: 1px solid lightgray;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 380px;
+    align-items: center;
+}
+.img5{
+    width: 100%;
+    height: 75%;
+    background-image: url("Asus\ Zenbook.jpg");
+    background-size: 100% 100%;
+}
+.rubrika5{
+    border: 1px solid lightgray;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 380px;
+    align-items: center;
+}
+.img6{
+    width: 100%;
+    height: 75%;
+    background-image: url("Dell\ Inspiron.jpg");
+    background-size: 100% 100%;
+}
+.rubrika6{
+    border: 1px solid lightgray;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 380px;
+    align-items: center;
+}
+.img7{
+    width: 100%;
+    height: 75%;
+    background-image: url("HP\ ZBook.jpg");
+    background-size: 100% 100%;
+}
+.rubrika7{
+    border: 1px solid lightgray;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 380px;
+    align-items: center;
+}
+.img8{
+    width: 100%;
+    height: 75%;
+    background-image: url("Lenovo\ Legion5.jpg");
+    background-size: 100% 100%;
+}
+.rubrika8{
+    border: 1px solid lightgray;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 380px;
+    align-items: center;
+}
+.img9{
+    width: 70%;
+    height: 75%;
+    background-image: url("ASUS\ Zen\ AiO.jpg");
+    background-size: 100% 100%;
+}
+.rubrika9{
+    border: 1px solid lightgray;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 380px;
+    align-items: center;
+}
+.img10{
+    width: 60%;
+    height: 75%;
+    background-image: url("Acer\ AspireX.jpg");
+    background-size: 100% 100%;
+}
+.rubrika10{
+    border: 1px solid lightgray;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 380px;
+    align-items: center;
+}
+.img11{
+    width: 70%;
+    height: 75%;
+    background-image: url("Computer\ Gaming.jpg");
+    background-size: 100% 100%;
+}
+.rubrika11{
+    border: 1px solid lightgray;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 380px;
+    align-items: center;
+}
+.img12{
+    width: 70%;
+    height: 70%;
+    background-image: url("Server\ NAS.jpg");
+    background-size: 100% 100%;
+}
+.rubrika12{
+    border: 1px solid lightgray;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 380px;
+    align-items: center;
+}
+.img13{
+    width: 100%;
+    height: 75%;
+    background-image: url("Laptop\ Razor\ Blade.jpg");
+    background-size: 100% 100%;
+}
+.rubrika13{
+    border: 1px solid lightgray;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 380px;
+    align-items: center;
+}
+.img14{
+    width: 80%;
+    height: 90%;
+    background-image: url("Laptop\ Xiaomi.jpg");
+    background-size: 100% 100%;
+}
+.rubrika14{
+    border: 1px solid lightgray;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 380px;
+    align-items: center;
+}
+.img15{
+    width: 55%;
+    height: 75%;
+    background-image: url("Dell\ PowerEdge.jpg");
+    background-size: 100% 100%;
+}
+.rubrika15{
+    border: 1px solid lightgray;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 380px;
+    align-items: center;
+}
+.img16{
+    width: 50%;
+    height: 75%;
+    background-image: url("Kompjuter\ Paladin.jpg");
+    background-size: 100% 100%;
+}
