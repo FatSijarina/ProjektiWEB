@@ -1,0 +1,47 @@
+header{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: peachpuff;
+    color: orangered;
+}
+h3{
+    margin-left: 10px;
+}
+ul{
+    width: 50%;
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+ul li:hover{
+    color: darkred;
+    font-weight: bold;
+    border-bottom: 3px solid darkred;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+.shigjeta{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 17px;
+}
+.we{
+    border: 3px solid orangered;
+    border-style: double;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.txt{
+    width: 90%;
+    height: 70%;
+    margin-top: 25px;
+}
