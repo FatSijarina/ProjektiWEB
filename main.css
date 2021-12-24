@@ -4,14 +4,12 @@
     margin: 0;
     padding: 0; 
 }
-header{
+.header{
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('background-img.jpg');
     background-attachment: scroll;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 88vh;
-}
-.header{
     background-attachment: fixed !important;
 }
 .logo-text{
@@ -45,7 +43,7 @@ header{
 }
 .ul1{
     list-style-type: none;
-    margin-left: 35%;
+    margin-left:  35%;
 }
 .ul1 li{
     display: inline-block;
@@ -66,7 +64,7 @@ header{
 .title{
     position: absolute;
     top: 40%;
-    left: 50%;
+    left: 45%;
     font-size: 40px;
     color: white;
     transform: translate(-50%,-50%);
@@ -272,3 +270,65 @@ footer{
     display: flex;
     flex-direction: row;  
 }
+
+/*Phone page */
+
+.container-phone{
+    margin-top: 25px;
+}
+.filter-inputs{
+    margin-left: 57px;
+}
+.company-button, .type-button , .price-button{
+    margin: 20px;
+}
+.filter-button{
+    width: 330px;
+    height: 35px;
+    border-radius: 10px;
+    color: white;
+    background-color: #316B83;
+    margin-left: 80px;
+    margin-top: 45px;
+}
+.divi-2, .divi-3, .company-div,.capacity-div{
+    margin-left: 25px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.custom-select{
+    width: 220px;
+    height: 29px;
+    font-size: 16px;
+    border-radius: 2px;
+    border: 1px solid grey;
+    background-color: rgb(226, 226, 226);
+}
+.input-group-text{
+    font-size: 16px;
+    color: #316B83;
+    font-weight: bold;
+}
+/* divi qe kane me u shfaq telefonat */
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 40px;
+    margin-left: 69px;
+}
+.footer-phone{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 18px;   
+}
+.header-phone{
+    text-align: center;
+    color: white;
+    font-family: "Gill Sans", sans-serif;
+    letter-spacing: 1px; 
+}
+
