@@ -9,6 +9,14 @@ header{
 h3{
     margin-left: 10px;
 }
+.ontech{
+    color: whitesmoke;
+}
+.ontech:hover{
+    color: blue;
+    cursor: none;
+    text-shadow: 10px 10px 10px black;
+}
 ul{
     width: 50%;
     display: flex;
@@ -18,11 +26,10 @@ ul{
     font-size: 20px;
 }
 ul li:hover{
-    color: black;
+    color: blue;
+    text-shadow: 10px 10px 10px black;
     font-weight: bold;
-    border-bottom: 3px solid black;
-    cursor: pointer;
-    font-family: Arial, Helvetica, sans-serif;
+    cursor: none;
     font-size: 20px;
 }
 .shigjeta{
@@ -95,6 +102,7 @@ ul li:hover{
 .punuar_nga{
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
