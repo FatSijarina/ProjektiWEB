@@ -9,6 +9,14 @@ header{
 h3{
     margin-left: 10px;
 }
+.ontech{
+    color: whitesmoke;
+}
+.ontech:hover{
+    color: blue;
+    text-shadow: 10px 10px 10px black;
+    cursor: none;
+}
 .searchheader{
     display: flex;
     justify-content: center;
@@ -23,11 +31,10 @@ ul{
     font-size: 20px;
 }
 ul li:hover{
-    color: black;
+    color: blue;
+    text-shadow: 10px 10px 10px black;
     font-weight: bold;
-    border-bottom: 3px solid black;
-    cursor: pointer;
-    font-family: Arial, Helvetica, sans-serif;
+    cursor: none;
     font-size: 20px;
 }
 .shigjeta{
