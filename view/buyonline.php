@@ -1,0 +1,237 @@
+<?php 
+include_once '../controller/userController.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Buy Online</title>
+    <style>
+        body {
+            background-color: rgb(238, 238, 238);
+        }
+        form{
+            border-radius: 10px; 
+            border: 2px inset darkblue; 
+            width: 350px; 
+            height: 600px; 
+            background-color: whitesmoke;
+        }
+        input {
+            border-radius: 1px;
+            border: darkgray;
+            background-color: rgb(151, 151, 151);
+            color: whitesmoke;
+            height: 25px;
+            margin-left: 7px;
+        }
+
+        h4 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 12;
+            color: darkblue;
+            margin-left: 7px;
+        }
+        .main{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .butonicontinue {
+            margin-left: 34%;
+            margin-top: 5%;
+            width: 125px;
+            height: 30px;
+            font-size: 19px;
+            border: inset 0;
+            border-radius: 12px;
+            background-color: rgb(182, 182, 182);
+            color: rgb(85, 85, 85);
+        }
+
+        .butonicontinue:hover {
+            color: whitesmoke;
+            background-color: rgb(117, 117, 117);
+            border: 2px solid darkblue;
+            box-shadow: 5px 5px 5px rgb(100, 100, 100);
+        }
+        .mainimg{
+            width: 50%;
+            height: 70%;
+            justify-content: center;
+        }
+        .inputi{
+            width: 330px;
+        }
+        @media only screen and (max-width:900px) {
+            .mainimg{
+                display: none;
+            }
+            .inputi{
+                width: 95%;
+            }
+            .butonicontinue {
+                margin-left: 33%;
+            }
+            form{
+                width: 80%;  
+                background-color: whitesmoke;
+            }
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <main>
+        <label id="label"></label>
+        <div class="main">
+            <div class="mainimg">
+                <img src="Payment.gif" alt="" height="100%" width="100%">
+            </div>
+            <form action="<?= $_SERVER['PHP_SELF']?>"  method="post" style="border-radius: 10px; border: 2px inset darkblue; width: 350px; height: 600px; background-color: whitesmoke;">
+                <img src="logo.PNG" alt="" width="35%" style="margin-left: 33%; margin-top: 2%; border-radius: 45px;">
+                <pre><h4 >First Name*                      Last Name*</h4></pre>
+                <input type="text" id="emri" name="name" style="width: 45%;">
+                <input type="text" id="mbiemri" name="surname" style="margin-left: 2px; width: 45%;">
+                <pre><h4 >Phone Number*</h4></pre>
+                <input type="number" id="nrTel" name="number" placeholder="04x-xxx-xxx" class="inputi">
+                <pre><h4 >Email Address*</h4></pre>
+                <input type="email" id="email" name="email" placeholder="Must contain @ and .com" class="inputi" >
+                <pre><h4 >Address*</h4></pre>
+                <input type="text" id="address" name="address" placeholder="No., Street, City, Country" class="inputi">
+                <pre><h4 >Zip Code*</h4></pre>
+                <input type="number" id="zip" name="zip" min="10000" class="inputi" >
+                <input type="submit" id="continue" value="Continue" class="butonicontinue" name="continue">
+            </form>
+        </div>
+    </main>
+    <script>
+
+        var goon = document.getElementById("continue");
+
+        goon.addEventListener("click", function (event) {
+            var LabelValidimi = document.getElementById('label');
+
+            var nameV = /([A-Z][a-z]{2,9})/;
+            var name = document.getElementById("emri").value;
+
+            var snValidation = /^[A-Z][a-z]{2,20}/;
+            var surname = document.getElementById('mbiemri').value;
+
+            var nrV = /^(0|[0-9][0-9]*)$/;
+            var nrtel = document.getElementById('nrTel').value;
+
+            var emailV = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})/;
+            var email = document.getElementById('email').value;
+
+            var addressV = /^[0-9]{1,3}\,\s[A-Za-z]{5,15}(\s?)([A-Z][a-z]{0,15})?\,\s[A-Z][a-z]{2,15}\,\s[A-Z][a-z]{4,30}$/;
+            var address = document.getElementById('address').value;
+
+            var zipV = /^[1-9][0-9]{4}/;
+            var zip = document.getElementById('zip').value;
+
+            if (zip == "") {
+                LabelValidimi.innerHTML = "Please fill the <b>zip code</b> field !!";
+                LabelValidimi.style.color = "red";
+                event.preventDefault();
+            }
+            else {
+                if (zipV.test(zip) == true) {
+
+                }
+                else {
+                    LabelValidimi.innerHTML = "Please fill the <b>zip code</b> field correctly !!";
+                    LabelValidimi.style.color = "red";
+                    event.preventDefault();
+                }
+            }
+
+            if (address == "") {
+                LabelValidimi.innerHTML = "Please fill the <b>address</b> field !!";
+                LabelValidimi.style.color = "red";
+                event.preventDefault();
+            }
+            else {
+                if (addressV.test(address) == true) {
+
+                }
+                else {
+                    LabelValidimi.innerHTML = "Please fill the <b>address</b> field correctly !!";
+                    LabelValidimi.style.color = "red";
+                    event.preventDefault();
+                }
+            }
+
+            if (email == "") {
+                LabelValidimi.innerHTML = "Please fill the <b>email</b> field !!";
+                LabelValidimi.style.color = "red";
+                event.preventDefault();
+            }
+            else {
+                if (emailV.test(email) == true) {
+
+                }
+                else {
+                    LabelValidimi.innerHTML = "Please fill the <b>email</b> field correctly !!";
+                    LabelValidimi.style.color = "red";
+                    event.preventDefault();
+                }
+            }
+
+            if (nrtel == "") {
+                LabelValidimi.innerHTML = "Please fill the <b>phone number</b> field !!";
+                LabelValidimi.style.color = "red";
+                event.preventDefault();
+            }
+            else {
+                if (nrV.test(nrtel) == true) {
+
+                }
+                else {
+                    LabelValidimi.innerHTML = "Please fill the <b>phone number</b> field correctly !!";
+                    LabelValidimi.style.color = "red";
+                    event.preventDefault();
+                }
+            }
+
+            if (surname == "") {
+                LabelValidimi.innerHTML = "Please fill the <b>surname</b> field !!";
+                LabelValidimi.style.color = "red";
+                event.preventDefault();
+            }
+            else {
+                if (snValidation.test(surname) == true) {
+
+                }
+                else {
+                    LabelValidimi.innerHTML = "Please fill the <b>surname</b> field correctly !!";
+                    LabelValidimi.style.color = "red";
+                    event.preventDefault();
+                }
+            }
+
+            if (name == "") {
+                LabelValidimi.innerHTML = "Please fill the <b>name</b> field !!";
+                LabelValidimi.style.color = "red";
+                event.preventDefault();
+            }
+            else {
+                if (nameV.test(name) == true) {
+
+                } else {
+                    LabelValidimi.innerHTML = "Please fill the <b>name</b> field correctly !!";
+                    LabelValidimi.style.color = "red";
+                    event.preventDefault();
+                }
+            }
+
+            if (name == "" && surname == "" && nrtel == "" && email == "" && address == "" && zip == "") {
+                LabelValidimi.innerHTML = "Two or more fields are empty !!";
+                LabelValidimi.style.color = "red";
+                event.preventDefault();
+            }
+        })
+    </script>
+</body>
+
+</html>

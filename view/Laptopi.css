@@ -1,0 +1,317 @@
+header{
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(117, 117, 117);
+    color: whitesmoke;
+}
+h3{
+    margin-left: 10px;
+}
+.ontech{
+    color: whitesmoke;
+}
+.ontech:hover{
+    color: blue;
+    text-shadow: 10px 10px 10px black;
+    cursor: none;
+}
+.searchheader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul{
+    width: 30%;
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+ul li:hover{
+    color: blue;
+    text-shadow: 10px 10px 10px black;
+    font-weight: bold;
+    cursor: none;
+    font-size: 20px;
+}
+.shigjeta{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 17px;
+}
+.recomended{
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    display: flex;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+.butonattabela{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+button{
+    font-family:'Courier New', Courier, monospace ;
+    font-size: 19px;
+    border: inset 0;
+    border-radius: 12px;
+    background-color: rgb(182, 182, 182); 
+    width: 155px; 
+    height: 50px;
+}
+.button:hover {
+    color: whitesmoke;
+    background-color: rgb(117, 117, 117);
+    border: 2px solid darkblue;
+}
+table{
+    border: 3px solid rgb(117, 117, 117);
+    border-style: double;
+    border-radius: 12px;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 35px;
+}
+table tr, td{
+    height: 100px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+.fotografit{
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.rubrika{
+    border: 1px solid lightgray;
+    background-color: whitesmoke;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 380px;
+    align-items: center;
+}
+.img1{
+    width: 100%;
+    height: 75%;
+    background-image: url("Microsoft Surface Book3.jpg");
+    background-size: 100% 100%;
+}
+.Cmimi{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cmimi, h3{
+    color: black;
+}
+.img2{
+    width: 100%;
+    height: 80%;
+    background-image: url("Apple\ iMac.jpg");
+    background-size: 100% 100%;
+}
+.img3{
+    width: 100%;
+    height: 75%;
+    background-image: url("Lenovo\ IdeaPad.jpg");
+    background-size: 100% 100%;
+}
+.img4{
+    width: 70%;
+    height: 75%;
+    background-image: url("Alfa\ Gamer.jpg");
+    background-size: 100% 100%;
+}
+.img5{
+    width: 100%;
+    height: 75%;
+    background-image: url("Asus\ Zenbook.jpg");
+    background-size: 100% 100%;
+}
+.img6{
+    width: 100%;
+    height: 75%;
+    background-image: url("Dell\ Inspiron.jpg");
+    background-size: 100% 100%;
+}
+.img7{
+    width: 100%;
+    height: 75%;
+    background-image: url("HP\ ZBook.jpg");
+    background-size: 100% 100%;
+}
+.img8{
+    width: 100%;
+    height: 75%;
+    background-image: url("Lenovo\ Legion5.jpg");
+    background-size: 100% 100%;
+}
+.img9{
+    width: 70%;
+    height: 75%;
+    background-image: url("ASUS\ Zen\ AiO.jpg");
+    background-size: 100% 100%;
+}
+.img10{
+    width: 60%;
+    height: 75%;
+    background-image: url("Acer\ AspireX.jpg");
+    background-size: 100% 100%;
+}
+.img11{
+    width: 70%;
+    height: 75%;
+    background-image: url("Computer\ Gaming.jpg");
+    background-size: 100% 100%;
+}
+.img12{
+    width: 70%;
+    height: 70%;
+    background-image: url("Server\ NAS.jpg");
+    background-size: 100% 100%;
+}
+.img13{
+    width: 100%;
+    height: 75%;
+    background-image: url("Laptop\ Razor\ Blade.jpg");
+    background-size: 100% 100%;
+}
+.img14{
+    width: 80%;
+    height: 90%;
+    background-image: url("Laptop\ Xiaomi.jpg");
+    background-size: 100% 100%;
+}
+.img15{
+    width: 55%;
+    height: 75%;
+    background-image: url("Dell\ PowerEdge.jpg");
+    background-size: 100% 100%;
+}
+.img16{
+    width: 50%;
+    height: 75%;
+    background-image: url("Kompjuter\ Paladin.jpg");
+    background-size: 100% 100%;
+}
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 18px;
+}
+.Llogaria a{
+    text-decoration: none;
+    color: black;
+}
+.Llogaria a:hover{
+    color: rgb(77, 76, 76);
+}
+.footer2{
+    text-align: left; 
+    background-color:rgba(187, 187, 187, 0.842);
+}
+.footer2 a{
+   margin: 15px;
+   text-decoration: none;
+   color: #0b152cf1;
+}
+.footer2 a:hover{
+    color: #0b152cf1;
+    border-bottom: 1px solid #0b152cf1;
+    font-size: larger;
+}
+@media only screen and (max-width:900px){
+    ul{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        justify-content: space-evenly;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width:650px){
+    .butonattabela{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    button{
+        font-family: 'Times New Roman', Times, serif ;
+        font-size: 18px;
+        border: inset 0;
+        border-radius: 12px;
+        background-color: rgb(182, 182, 182); 
+        width: 120px; 
+        height: 50px;
+    }
+}
+@media only screen and (max-width:600px){
+    .rubrika{
+        border: 1px solid lightgray;
+        background-color: whitesmoke;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        height: 450px;
+        align-items: center;
+    }
+    .img1{
+        width: 100%;
+        height: 55%;
+        background-image: url("Microsoft\ Surface\ Book3.jpg");
+        background-size: 100% 100%;
+    }
+    .Cmimi{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+@media only screen and (max-width:525px){
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .Llogaria{
+        width: 90%;
+        text-align: left;
+    }
+    .Kontakt{
+        width: 90%;
+        text-align: left;
+    }
+}
