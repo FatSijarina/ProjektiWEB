@@ -1,3 +1,8 @@
+<?php
+    include_once '../repository/aboutUsRepository.php';
+
+    $aboutUs = new aboutUsRepository;
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,8 +36,11 @@
                     <img src="foto/icon1.png" width="75%" height="75%" style="margin-top: 25px;">
                 </div>
                 <div class="txt">
-                    <h3>Who we are?</h3>
-                    <p style="font-size:larger ">On-Tech, was founded in 2006. It is the leading company in the retail, electronics market, thanks to its customer focus and wide range of products and services.</p>
+                    <?php
+                        $arr = $aboutUs->getAboutUsElement(1);
+                    ?>
+                    <h3><?php echo"$arr[0]"?></h3>
+                    <p style="font-size:larger "><?php echo"$arr[1]"?></p>
                 </div>
             </div>
             <div class="we">
@@ -41,8 +49,11 @@
                         <img src="foto/icon3.png" width="65%" height="65%" style="margin-top: 25px;">
                     </div>
                     <div class="txt1">
-                        <h3>Always first</h3>
-                        <p style="font-size:larger">Based on customers' impressions and their evaluation, it turns out that On-Tech is the leading company in the country and the region in terms of technology products</p>
+                    <?php
+                        $arr = $aboutUs->getAboutUsElement(2);
+                    ?>
+                    <h3><?php echo"$arr[0]"?></h3>
+                    <p style="font-size:larger "><?php echo"$arr[1]"?></p>
                     </div>
                 </div>
             </div>
@@ -50,16 +61,22 @@
 
             </div>
             <div class="bgfoto2">
-                <h2>Mission</h2>
-                <p style="font-size:larger; width: 95%; ">We help people improve their standard of living and bring about positive change for families and individuals</p>
+                <?php
+                    $arr = $aboutUs->getAboutUsElement(3);
+                ?>
+                <h2><?php echo"$arr[0]"?></h2>
+                <p style="font-size:larger "><?php echo"$arr[1]"?></p>
             </div>
             <div class="we">
                 <div class="fotooo">
                     <img src="foto/Icon4.png" width="75%" height="75%" style="margin-top: 25px;">
                 </div>
                 <div class="txt">
-                    <h3>Vision</h3>
-                    <p style="font-size:larger ">To be the leading company in the trade of electronic devices in all markets where we operate with the greatest financial achievements and the greatest geographical spread</p>
+                    <?php
+                        $arr = $aboutUs->getAboutUsElement(4);
+                    ?>
+                    <h3><?php echo"$arr[0]"?></h3>
+                    <p style="font-size:larger "><?php echo"$arr[1]"?></p>
                 </div>
             </div>
         </div>
@@ -73,8 +90,11 @@
                         <img src="foto/Alma.png" style="width: 100%; height: 100%;">
                     </div>
                     <div class="flip-card-back">
-                        <h1>Alma Novobërdaliu</h1> 
-                        <p>Computer Science and Engineering</p> 
+                        <?php
+                            $arr = $aboutUs->getAboutUsElement(5);
+                        ?>
+                        <h1><?php echo"$arr[0]"?></h1> 
+                        <p><?php echo"$arr[1]"?></p> 
                     </div>
                 </div>
             </div>
@@ -84,8 +104,11 @@
                         <img src="foto/Fati.png" style="width: 100%; height: 100%;">
                     </div>
                     <div class="flip-card-back">
-                        <h1>Fat Sijarina</h1> 
-                        <p>Computer Science and Engineering</p> 
+                        <?php
+                            $arr = $aboutUs->getAboutUsElement(6);
+                        ?>
+                        <h1><?php echo"$arr[0]"?></h1> 
+                        <p><?php echo"$arr[1]"?></p> 
                     </div>
                 </div>
             </div>

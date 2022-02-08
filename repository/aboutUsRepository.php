@@ -1,18 +1,18 @@
 <?php 
 include_once '../database/databaseConnection.php';
 
-class LaptopRepository{
+class AboutUsRepository{
     private $connection;
 
     function __construct(){
-        $conn = new DatabaseConnection2;
+        $conn = new DatabaseConnection3;
         $this->connection = $conn;
     }
 
-    function getArticleByID($id){
+    function getAboutUsElement($id){
         $conn = $this->connection->startConnection();
 
-        $sql = "SELECT IMG, Description, Price FROM laptopi where ID = '$id'";
+        $sql = "SELECT Heading , Description FROM aboutus where ID = '$id'";
 
         $result = $conn->query($sql);
 

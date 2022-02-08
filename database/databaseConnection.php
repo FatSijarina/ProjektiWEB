@@ -11,16 +11,11 @@ class DatabaseConnection{
     function startConnection(){
         if(!$conn = mysqli_connect($this->server,$this->username,$this->password,$this->database)){
             echo "Connection failed";
-             return null;
+            return null;
         }else{
-            echo "Connection successfully";
+            //echo "Connection successfully";
             return $conn;
         }
     }
 }
-
-//$db = new DatabaseConnection();
-
-//$db->startConnection();
-
 ?>

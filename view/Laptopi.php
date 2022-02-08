@@ -2,7 +2,6 @@
     include_once '../repository/laptopRepository.php';
 
     $pc = new LaptopRepository;
-    $arr = $pc->getArticleByID(1);
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,7 +20,7 @@
         <ul>
             <a href="index.html" style="text-decoration: none; color: whitesmoke"><li>Home</li></a>
             <a href="phone.html" style="text-decoration: none; color: whitesmoke"><li>Mobile Phone</li></a>
-            <a href="AboutUs.html" style="text-decoration: none; color: whitesmoke"><li>About Us</li></a>
+            <a href="AboutUs.php" style="text-decoration: none; color: whitesmoke"><li>About Us</li></a>
             <a href="LogIn.html" style="text-decoration: none; color: whitesmoke"><li>Sign Up</li></a>
         </ul>
     </header>
