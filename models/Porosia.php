@@ -3,22 +3,16 @@
         private $id;
         private $firstName;
         private $lastName;
-        private $nrTel;
-        private $email;
-        private $address;
-        private $zip;
+        private $menyra;
         private $creditCardNr;
         private $securityCode;
         private $cardExpiration;
 
-        function __construct($id,$firstName,$lastName,$nrTel,$email,$address,$zip,$creditCardNr,$securityCode,$cardExpiration){
+        function __construct($id,$firstName,$lastName,$menyra,$creditCardNr,$securityCode,$cardExpiration){
             $this->id = $id;  
             $this->firstName = $firstName;
             $this->lastName = $lastName;
-            $this->nrTel = $nrTel;
-            $this->email = $email;
-            $this->address = $address;
-            $this->zip = $zip;
+            $this->menyra = $menyra;
             $this->creditCardNr = $creditCardNr;
             $this->securityCode = $securityCode;
             $this->cardExpiration = $cardExpiration;
@@ -33,17 +27,8 @@
           function getLastName(){
               return $this->lastName;
           }
-          function getNrTel(){
-            return $this->nrTel;
-          }
-          function getEmail(){
-            return $this->email;
-          }
-          function getAddress(){
-              return $this->address;
-          }
-          function getZip(){
-              return $this->zip;
+          function getMenyra(){
+            return $this->menyra;
           }
           function getCreditCardNr(){
             return $this->creditCardNr;

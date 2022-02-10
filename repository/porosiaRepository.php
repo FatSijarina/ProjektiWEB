@@ -1,5 +1,6 @@
 <?php 
 include_once '../database/databaseConnection.php';
+include_once '../repository/userRepository.php';
 
 class PorosiaRepository{
     private $connection;
@@ -15,29 +16,31 @@ class PorosiaRepository{
         $id = $porosia->getId();
         $fName = $porosia->getFirstName();
         $lName = $porosia->getLastName();
-        $nrTel = $porosia->getNrTel();
-        $email = $porosia->getEmail();
-        $address = $porosia->getAddress();
-        $zip = $porosia->getZip();
+        $menyra = $porosia->getMenyra();
         $creditCardNr = $porosia->getCreditCardNr();
         $securityCode = $porosia->getSecurityCode();
         $cardExp = $porosia->getCardExpiration();
 
-        $sql = "INSERT INTO user VALUES ('$id','$fName','$lName','$nrTel','$email','$address','$zip','$creditCardNr','$securityCode','$cardExp')";
-        if(mysqli_query($conn,$sql)){
-            echo "query is executed succesfuly";
-            header("location:../view/login.php");
-        }else{
-            echo "This is an Error: ".mysqli_error($conn);
-        }
+        $userRepository = new UserRepository;
+        $user = $userRepository->getUserByName($fName);
 
+        if($user == $fName){
+            $sql = "INSERT INTO porosia VALUES ('$id','$fName','$lName','$menyra','$creditCardNr','$securityCode','$cardExp')";
+            if(mysqli_query($conn,$sql)){
+                header("location:../view/buyonline.php");
+            }else{
+                echo "This is an Error: ".mysqli_error($conn);
+            }
+        }else{
+            header("location:../view/LogIn.html");
+        }            
 
     }
 
-    function getPorosiaByID($id){
+    function getPorosiaByID($emri){
         $conn = $this->connection->startConnection();
 
-        $sql = "SELECT * FROM user WHERE id = '$id'";
+        $sql = "SELECT * FROM porosia WHERE emri = '$emri'";
 
         if($statement = $conn->query($sql)){
             $result = $statement->fetch_row();

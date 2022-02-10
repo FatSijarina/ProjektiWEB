@@ -13,18 +13,10 @@ if(isset($_POST['continue'])){
         $address = $_POST['address'];
         $zip = $_POST['zip'];
 
-
-      
         $userRepository = new UserRepository;
-        //$userRepository->insertUser($user);
+
         $user = $userRepository->getUserByName($name);
 
-
-        //header("location:../view/buyonline2.php"); 
-        /*if(empty($user)){
-            echo "Username or Password is Incorrect!";
-        }else{*/
-            //print_r($user);
             if($user == $name){
                 header("location:../view/buyonline2.php"); 
             }else{
@@ -32,5 +24,4 @@ if(isset($_POST['continue'])){
             }
     }
 }
-
 ?>

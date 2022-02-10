@@ -5,7 +5,7 @@ class LaptopRepository{
     private $connection;
 
     function __construct(){
-        $conn = new DatabaseConnection2;
+        $conn = new DatabaseConnection;
         $this->connection = $conn;
     }
 

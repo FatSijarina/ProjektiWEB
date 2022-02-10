@@ -5,7 +5,7 @@ class AboutUsRepository{
     private $connection;
 
     function __construct(){
-        $conn = new DatabaseConnection3;
+        $conn = new DatabaseConnection;
         $this->connection = $conn;
     }
 
