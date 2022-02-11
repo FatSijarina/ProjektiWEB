@@ -1,5 +1,5 @@
 <?php 
-include_once '../repository/userRepository.php';
+include_once '../repository/userRepositoryy.php';
 
 if(isset($_POST['continue'])){
     if(empty($_POST['name']) || empty($_POST['surname']) || empty($_POST['number']) || empty($_POST['email']) ||
@@ -13,9 +13,9 @@ if(isset($_POST['continue'])){
         $address = $_POST['address'];
         $zip = $_POST['zip'];
 
-        $userRepository = new UserRepository;
+        $userRepositoryy = new UserRepositoryy;
 
-        $user = $userRepository->getUserByName($name);
+        $user = $userRepositoryy->getUserByName($name);
 
             if($user == $name){
                 header("location:../view/buyonline2.php"); 

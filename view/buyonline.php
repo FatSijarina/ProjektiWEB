@@ -86,7 +86,7 @@ include_once '../controller/userController.php';
         <label id="label"></label>
         <div class="main">
             <div class="mainimg">
-                <img src="Payment.gif" alt="" height="100%" width="100%">
+                <img src="foto/Payment.gif" alt="" height="100%" width="100%">
             </div>
             <form action="<?= $_SERVER['PHP_SELF']?>"  method="post" style="border-radius: 10px; border: 2px inset darkblue; width: 350px; height: 600px; background-color: whitesmoke;">
                 <img src="logo.PNG" alt="" width="35%" style="margin-left: 33%; margin-top: 2%; border-radius: 45px;">

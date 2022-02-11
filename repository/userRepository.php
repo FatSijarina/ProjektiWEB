@@ -26,7 +26,7 @@ class UserRepository{
         echo " name: $name";
         echo " surname: $surname";
         echo " email: $email";
-        echo " phone number: $phone"
+        echo " phone number: $phone";
         echo " username: $username";
         echo " password: $password";
         echo "<br>";

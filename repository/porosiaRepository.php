@@ -1,6 +1,6 @@
 <?php 
 include_once '../database/databaseConnection.php';
-include_once '../repository/userRepository.php';
+include_once '../repository/userRepositoryy.php';
 
 class PorosiaRepository{
     private $connection;
@@ -48,6 +48,63 @@ class PorosiaRepository{
             return $result;
         }else{
             return null;
+        }
+    }
+
+    function showPorosia(){
+        $conn = $this->connection->startConnection();
+?>
+        <table border="1" style="width:90%; margin-left:5%; margin-top:5px;">
+        <?php
+            $stmt = $conn->query("SELECT Emri, Mbiemri, MenyraPageses FROM porosia");
+            while ($row = $stmt->fetch_row()) {
+                echo "<tr><td>";
+                echo($row[0]);
+                echo("</td><td>");
+                echo($row[1]);
+                echo("</td><td>");
+                echo($row[2]);
+                echo("</td></tr>\n");
+            }
+        ?>
+        </table>
+<?php
+    }
+
+    function addPorosia($id,$emri,$mbiemri,$menyraPageses,$ccnr,$sc,$ce){
+        $conn = $this->connection->startConnection();
+
+        $sql = "INSERT INTO porosia VALUES ('$id','','$emri','$mbiemri','$menyraPageses','$ccnr','$sc','$ce')";
+            if(mysqli_query($conn,$sql)){
+                header("location:../view/dashboard.php");
+            }else{
+                echo "This is an Error: ".mysqli_error($conn);
+            }
+    }
+
+    function removePorosiaByID($id){
+        $conn = $this->connection->startConnection();
+
+        $sql = "DELETE FROM porosia where ID = '$id'";
+
+        if(mysqli_query($conn,$sql)){
+            return "Deleted successfully !!";
+        }
+        else{
+            return "Not deleted !!";
+        }
+    }
+
+    function editArticle($idvjeter,$id,$emri,$mbiemri,$menyraPageses,$ccnr,$sc,$ce){
+        $conn = $this->connection->startConnection();
+
+        $sql = "UPDATE laptopi SET '$id','','$desc','$price' WHERE $id = '$idvjeter'";
+
+        if(mysqli_query($conn,$sql)){
+            echo "Edited!!";
+        }
+        else{
+            echo "ERROR !!";
         }
     }
 }

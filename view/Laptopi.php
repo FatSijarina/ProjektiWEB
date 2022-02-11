@@ -2,6 +2,18 @@
     include_once '../repository/laptopRepository.php';
 
     $pc = new LaptopRepository;
+
+    session_start();
+    $hide="";
+    if(isset($_SESSION['role'])){
+            $role = $_SESSION['role'];
+            if($role == "user"){
+            $hide="hide";
+            }
+        }
+
+  
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,6 +34,7 @@
             <a href="phone.html" style="text-decoration: none; color: whitesmoke"><li>Mobile Phone</li></a>
             <a href="AboutUs.php" style="text-decoration: none; color: whitesmoke"><li>About Us</li></a>
             <a href="LogIn.html" style="text-decoration: none; color: whitesmoke"><li>Sign Up</li></a>
+            <a class="<?php echo $hide?>" href="dashboard.php?">Dashboard</a>
         </ul>
     </header>
     <main>
@@ -423,3 +436,7 @@
       </div>
 </body>
 </html>
+
+<?php 
+//}
+?>
