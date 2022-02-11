@@ -8,8 +8,7 @@ if(isset($_POST['login'])){
       $username = $_POST['username'];
       $password = $_POST['password'];
 
-     // echo $username;
-      //echo $password;
+   
       $userRepository = new UserRepository;
       $user = $userRepository->getUserByUsername($username,$password);
   

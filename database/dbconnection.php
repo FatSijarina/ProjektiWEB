@@ -1,16 +1,25 @@
 <?php
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "users";
 
-    $conn = mysqli_connect($servername,$username,$password);
-    if(!$conn){
-        echo "ERROR";
-    }else{
-         echo "Lidhja u realizua me sukses!";
+class DatabaseMySQLiConfiguration
+{
+    private $connection;
+
+    private $servername = "localhost";
+    private $username = "root";
+    private $dbName = "useri";
+    private $password = "";
+
+    public function __construct()
+    {
+        $this->connection = new mysqli($this->servername, $this->username, $this->password, $this->dbName);
     }
+
+    protected function getConnection()
+    {
+        return $this->connection;
+    }
+}
 
 
 ?>

@@ -46,7 +46,7 @@ class UserRepository{
     function getUserByUsername($username,$password){
         $conn = $this->connection->startConnection();
 
-        $sql = "SELECT * FROM useri WHERE Username = '$username' and Password = '$password'";
+        $sql = "SELECT * FROM lokali WHERE Username = '$username' and Password = '$password'";
 
         if($statement = $conn->query($sql)){
             $result = $statement->fetch_row();
@@ -55,6 +55,27 @@ class UserRepository{
         }else{
             return null;
         }
+    }
+
+    function deleteUser($userID){
+        $conn = $this->connection->startConnection();
+
+        $sql = "Delete from lokali where ID = '$userID'";
+
+        if($statement = $conn->query($sql)){
+            $result = $statement->fetch_row();
+
+            return $result;
+        }
+        else{
+            return null;
+        }
+    }
+
+    function edit($id,$fullname){
+        $conn = $this->connection->startConnection();
+
+        $sql = "update lokali set fullname = '$fullname' where ID ='$id'";
     }
 
 }
