@@ -30,10 +30,10 @@
             <button style=" width: 50px; height: 25px; background-color: darkslategray; border: inset 0px; border-radius: 0;"><img src="foto/search.png" alt=""></button>
         </div>
         <ul>
-            <a href="index.html" style="text-decoration: none; color: whitesmoke"><li>Home</li></a>
-            <a href="phone.html" style="text-decoration: none; color: whitesmoke"><li>Mobile Phone</li></a>
+            <a href="index.php" style="text-decoration: none; color: whitesmoke"><li>Home</li></a>
+            <a href="phone.php" style="text-decoration: none; color: whitesmoke"><li>Mobile Phone</li></a>
             <a href="AboutUs.php" style="text-decoration: none; color: whitesmoke"><li>About Us</li></a>
-            <a href="LogIn.html" style="text-decoration: none; color: whitesmoke"><li>Sign Up</li></a>
+            <a href="LogIn.php" style="text-decoration: none; color: whitesmoke"><li>Sign Up</li></a>
             <a class="<?php echo $hide?>" href="dashboard.php?">Dashboard</a>
         </ul>
     </header>

@@ -14,10 +14,10 @@
     <header>
         <h3 id="up" class="ontech">ON-TECH</h3>
         <ul>
-            <a href="index.html" style="text-decoration: none; color: whitesmoke"><li>Home</li></a>
-            <a href="phone.html" style="text-decoration: none; color: whitesmoke"><li>Mobile Phone</li></a>
+            <a href="index.php" style="text-decoration: none; color: whitesmoke"><li>Home</li></a>
+            <a href="phone.php" style="text-decoration: none; color: whitesmoke"><li>Mobile Phone</li></a>
             <a href="Laptopi.php" style="text-decoration: none; color: whitesmoke"><li>Laptop</li></a>
-            <a href="LogIn.html" style="text-decoration: none; color: whitesmoke"><li>Sign Up</li></a>
+            <a href="LogIn.php" style="text-decoration: none; color: whitesmoke"><li>Sign Up</li></a>
         </ul>
     </header>
     <main>
