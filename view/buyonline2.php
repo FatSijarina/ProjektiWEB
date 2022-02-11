@@ -1,3 +1,7 @@
+<?php 
+    include_once '../controller/userController.php';
+    include_once '../controller/porosiaController.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,31 +84,32 @@
 </head>
 <body>
     <main>
-        <fieldset>
-            <legend><h3 style="color: rgb(70, 70, 70)">Payment Methods</h3></legend>
-            <input type="radio" name="pay" id="Card"><h3 style="display: inline; color: rgb(70, 70, 70)">Debit or Credit Card</h3> <br><br>
-            <input type="radio" name="pay" id="Cash"><h3 style="display: inline; color: rgb(70, 70, 70)">Cash</h3> <br><br>
-        </fieldset>
-        <table>
-            <div class="d1">
-                <tr>
-                    <td>First Name<br><input type="text" class="inputet" id="emri"></td>
-                    <td>Last Name<br><input type="text" class="inputet" id="mbiemri"></td>
-                </tr>
-                <tr>
-                    <td>Credit Card Number<br><input type="number" id="creditcard" class="inputet" maxlength="16" placeholder="**** **** **** ****"></td>
-                    <td>Security Code<br><input type="number" id="cvc" class="inputet" placeholder="CVC" maxlength="3" min="100" max="999">
-                </tr>
-                <tr>
-                    <td>Card Expiration<br><input type="text" id="cardExpiration" class="inputet" maxlength="5" placeholder="MM/YY"></td>
-                </tr>
+        <form action="<?= $_SERVER['PHP_SELF']?>" method="post">
+            <fieldset>
+                <legend><h3 style="color: rgb(70, 70, 70)">Payment Methods</h3></legend>
+                <input type="radio" name="pay" id="Card" value="card"><h3 style="display: inline; color: rgb(70, 70, 70)">Debit or Credit Card</h3> <br><br>
+                <input type="radio" name="pay" id="Cash" value="cash"><h3 style="display: inline; color: rgb(70, 70, 70)">Cash</h3> <br><br>
+            </fieldset>
+            <table>
+                <div class="d1">
+                    <tr>
+                        <td>First Name<br><input type="text" class="inputet" id="emri" name="fName"></td>
+                        <td>Last Name<br><input type="text" class="inputet" id="mbiemri" name="lName"></td>
+                    </tr>
+                    <tr>
+                        <td>Credit Card Number<br><input type="number" id="creditcard" name="ccNr" class="inputet" maxlength="16" placeholder="**** **** **** ****"></td>
+                        <td>Security Code<br><input type="number" id="cvc" name="cvc" class="inputet" placeholder="CVC" maxlength="3" min="100" max="999">
+                    </tr>
+                    <tr>
+                        <td>Card Expiration<br><input type="text" id="cardExpiration" name="ce" class="inputet" maxlength="5" placeholder="MM/YY"></td>
+                    </tr>
+                </div>
+            </table>
+            <hr>
+            <div class="d">
+                <input type="submit" id="submit" value="Submit Order" class="butoniSubmit" name="submitBtn">
             </div>
-        </table>
-        <hr>
-        <div class="d">
-            <input type="button" id="submit" value="Submit Order" class="butoniSubmit">
-            <dialog id="myDialog">Order submited</dialog>
-        </div>
+        </form>
         <label id="label"></label>
         <script>
             var goon = document.getElementById("submit");
@@ -220,11 +225,6 @@
                 event.preventDefault();
             }
         })
-
-        var x = document.getElementById("myDialog"); 
-            function showDialog() { 
-                x.show(); 
-            }
         </script>
     </main>
 </body>

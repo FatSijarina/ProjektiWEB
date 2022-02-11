@@ -19,11 +19,6 @@ class SimpleUser extends Person
         
     }
 
-    public function setCookie()
-    {
-        setcookie("fullname", $this->getFullName(), time() + 2 * 24 * 60 * 60);
-    }
-
     public function getFullName()
     {
         return $this->fullname;

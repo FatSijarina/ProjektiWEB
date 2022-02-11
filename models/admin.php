@@ -21,10 +21,7 @@ class Admin extends Person
        
     }
 
-    public function setCookie()
-    {
-        setcookie("username", $this->getUsername(), time() + 2 * 24 * 60 * 60);
-    }
+
     public function getFullName()
     {
         return $this->fullname;

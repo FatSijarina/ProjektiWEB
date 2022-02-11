@@ -1,3 +1,6 @@
+<?php 
+include_once '../controller/userController.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +10,13 @@
         body {
             background-color: rgb(238, 238, 238);
         }
-
+        form{
+            border-radius: 10px; 
+            border: 2px inset darkblue; 
+            width: 350px; 
+            height: 600px; 
+            background-color: whitesmoke;
+        }
         input {
             border-radius: 1px;
             border: darkgray;
@@ -63,6 +72,10 @@
             .butonicontinue {
                 margin-left: 33%;
             }
+            form{
+                width: 80%;  
+                background-color: whitesmoke;
+            }
         }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,23 +86,22 @@
         <label id="label"></label>
         <div class="main">
             <div class="mainimg">
-                <img src="C:\Users\HP\OneDrive\Desktop\Inxhinieri e WEB\Video\Payment.gif" alt="" height="100%" width="100%">
+                <img src="Payment.gif" alt="" height="100%" width="100%">
             </div>
-            <form style="border-radius: 10px; border: 2px inset darkblue; width: 350px; height: 600px; background-color: whitesmoke;">
+            <form action="<?= $_SERVER['PHP_SELF']?>"  method="post" style="border-radius: 10px; border: 2px inset darkblue; width: 350px; height: 600px; background-color: whitesmoke;">
                 <img src="logo.PNG" alt="" width="35%" style="margin-left: 33%; margin-top: 2%; border-radius: 45px;">
                 <pre><h4 >First Name*                      Last Name*</h4></pre>
-                <input type="text" id="emri" style="width: 45%;">
-                <input type="text" id="mbiemri" style="margin-left: 2px; width: 45%;">
+                <input type="text" id="emri" name="name" style="width: 45%;">
+                <input type="text" id="mbiemri" name="surname" style="margin-left: 2px; width: 45%;">
                 <pre><h4 >Phone Number*</h4></pre>
-                <input type="number" id="nrTel" placeholder="04x-xxx-xxx" class="inputi">
+                <input type="number" id="nrTel" name="number" placeholder="04x-xxx-xxx" class="inputi">
                 <pre><h4 >Email Address*</h4></pre>
-                <input type="email" id="email" placeholder="Must contain @ and .com" class="inputi" >
+                <input type="email" id="email" name="email" placeholder="Must contain @ and .com" class="inputi" >
                 <pre><h4 >Address*</h4></pre>
-                <input type="text" id="address" placeholder="No., Street, City, Country" class="inputi">
+                <input type="text" id="address" name="address" placeholder="No., Street, City, Country" class="inputi">
                 <pre><h4 >Zip Code*</h4></pre>
-                <input type="number" id="zip" min="10000" class="inputi" >
-                <a href="C:\Users\HP\OneDrive\Desktop\Inxhinieri e WEB\ProjektiWEB\buyonline2.html"><input type="button"
-                        id="continue" value="Continue" class="butonicontinue"></a>
+                <input type="number" id="zip" name="zip" min="10000" class="inputi" >
+                <input type="submit" id="continue" value="Continue" class="butonicontinue" name="continue">
             </form>
         </div>
     </main>

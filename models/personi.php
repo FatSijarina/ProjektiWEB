@@ -20,6 +20,5 @@ abstract class Person
     }
 
     abstract protected function setSession();
-    abstract protected function setCookie();
 
 }
