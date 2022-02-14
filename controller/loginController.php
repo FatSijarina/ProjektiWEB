@@ -12,12 +12,12 @@ if(isset($_POST['login'])){
       $userRepository = new UserRepository;
       $user = $userRepository->getUserByUsername($username,$password);
   
-      if(empty($user)){
-        echo "Username or Password is Incorrect!";
+      // if(empty($user)){
+      //   echo "Username or Password is Incorrect!";
         
-      }else{
-        header("location:../view/index.php"); 
-      }
+      // }else{
+      //   header("location:../view/index.php"); 
+      // }
 
 
     }

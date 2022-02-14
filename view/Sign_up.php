@@ -1,6 +1,4 @@
-<?php 
-include '../controller/signupController.php';
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -57,13 +57,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                <img src="img/memberlogin.jpg" width="70" height="70" style="margin-left: 111px;" ><br>
 
                <label for="username">USERNAME:</label> <br> <br>
-               <input type="text" placeholder="Username" name="username" id="username2"> <br> <br> <br>
+               <input type="text" placeholder="Username" name="username" id="username2"> <br> 
+               <label for="username" id="usernameLabel"></label> <br> <br>
 
                <label for="password">PASSWORD:</label> <br> <br>
-               <input type="password" placeholder="Password" name="password" id="password2"> <br> <br>
+               <input type="password" placeholder="Password" name="password" id="password2"> <br> 
+               <label for="password" id="passwordLabel"></label> <br> <br>
 
                <input type="checkbox" onclick="myFunction()"> Show Password <br> <br>
-               <input type="submit" value="Log in" name="login" class="loginInput"> <br> <br>
+               <input type="submit" value="Log in" name="login" class="loginInput" id="inputLogin"> <br> <br>
                
                <input type="checkbox"> <b style="color: #316B83;">Remember me</b>
                <a href="#" style="text-decoration: none; color: rgb(114, 113, 113); padding-left: 59px;">Forgot password?</a>
@@ -83,6 +85,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
 </div>
+
+
+
 <!-- PASSWORD -->
     <script>
         function myFunction() {
@@ -93,9 +98,35 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             x.type = "password";
         }
 }
-    </script>
+    
 
 
+var login = document.getElementById("inputLogin");
+
+login.addEventListener("click",function(event) {
+
+        var usernameLabel = document.getElementById('usernameLabel');
+        var username = document.getElementById('username2').value;
+
+        if(username == ""){
+            usernameLabel.innerHTML = "Fill the username field!";
+            usernameLabel.style.color="red";
+            event.preventDefault();
+        }
+    
+
+    
+        var passwordLabel = document.getElementById('passwordLabel');
+        var password = document.getElementById('password2').value;
+
+        if(password == ""){
+            passwordLabel.innerHTML = "Fill the password field!";
+            passwordLabel.style.color = "red";
+            event.preventDefault();
+        }
+
+})
+</script>
     
 </body>
 </html>
