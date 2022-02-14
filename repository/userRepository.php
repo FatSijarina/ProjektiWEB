@@ -1,5 +1,6 @@
 <?php 
-include_once '../database/dbconnection.php';
+include_once '../database/databaseConnection.php';
+include_once '../models/user.php';
 
 class UserRepository{
     private $connection;
@@ -12,41 +13,30 @@ class UserRepository{
     function insertUser($user){
        
         $conn = $this->connection->startConnection();
-       
 
-        $id = $user->getId();
         $name = $user->getName();
         $surname = $user->getSurname();
         $email = $user->getEmail();
         $phone = $user ->getPhone();
         $username = $user->getUsername();
         $password = $user->getPassword();
-        echo "<br>";
-        echo " ID: $id";
-        echo " name: $name";
-        echo " surname: $surname";
-        echo " email: $email";
-        echo " phone number: $phone";
-        echo " username: $username";
-        echo " password: $password";
-        echo "<br>";
+        $usertype = $user -> getUserType();
 
 
-        $sql = "INSERT INTO users (Id,Name,Surname,Email,Username,Password) VALUES ('$id','$name','$surname','$email','$username','$password')";
+        $sql = "INSERT INTO useri (Name,Surname,Email,Phone,Username,Password,usertype) VALUES ('$name','$surname','$email','$phone',$username','$password','$usertype')";
         if(mysqli_query($conn,$sql)){
-            echo "Query is executed succesfully";
             header("location:../view/LogIn.php");
         }else{
-            echo "Error: ".mysqli_error($conn);
+            echo "This is an Error:";
         }
 
 
     }
 
-    function getUserByUsername($username,$password){
+    function getUserByUsername($username){
         $conn = $this->connection->startConnection();
 
-        $sql = "SELECT * FROM lokali WHERE Username = '$username' and Password = '$password'";
+        $sql = "SELECT * FROM useri WHERE Username = '$username'";
 
         if($statement = $conn->query($sql)){
             $result = $statement->fetch_row();
@@ -60,23 +50,57 @@ class UserRepository{
     function deleteUser($userID){
         $conn = $this->connection->startConnection();
 
-        $sql = "Delete from lokali where ID = '$userID'";
+        $sql = "DELETE from useri where ID = '$userID'";
 
         if($statement = $conn->query($sql)){
-            $result = $statement->fetch_row();
-
-            return $result;
+            return "Deleted successfully!";
         }
         else{
-            return null;
+            return "Not deleted!";
         }
     }
 
-    function edit($id,$fullname){
+    function editUser($id1,$id,$emri,$mbiemri,$email,$phone,$username,$password){
         $conn = $this->connection->startConnection();
 
-        $sql = "update lokali set fullname = '$fullname' where ID ='$id'";
+        $sql = "UPDATE useri SET '$name', '$surname','$username','$password' WHERE $id = $id1 ";
+
+        if(mysqli_query($conn,$sql)){
+            echo "Edited!";
+        }
+        else{
+            echo "ERROR!";
+        }
     }
+
+    function addUser($id,$name,$surname,$email,$phone,$username,$password){
+        $conn = $this->connection->startConnection();
+
+        $sql = "INSERT INTO useri VALUES ('$id','','$name','$surname','$email','$phone','$username','$password','$usertype')";
+
+            if(mysqli_query($conn,$sql)){
+                header("location:../view/dashboard.php");
+            }else{
+                echo "This is an Error: ".mysqli_error($conn);
+            }
+    }
+
+    function showUSers(){
+        $conn = $this->connection->startConnection();
+?>
+        <table border="1">
+        <?php
+            $statement = $conn->query("SELECT Description FROM phone");
+            while ($row = $statement->fetch_row()) {
+                echo "<tr><td>";
+                echo($row[0]);
+                echo("</td></tr>\n");
+            }
+        ?>
+        </table>
+<?php
+    }
+
 
 }
 

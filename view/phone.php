@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,10 +12,10 @@
     <h3>Get your favourite now!</h3>
    </header>
 
-	<div class="container-phone">
+	 <div class="container-phone">
     <a id="up"></a>
-		<div class="filter-inputs">
-			<!--inputet per filtrim-->
+		 <div class="filter-inputs">
+		
 			<div class="divi-2">    
                 <label class="input-group-text" for="inputGroupSelect01">Min: </label>
                 <select class="custom-select" id="min">
@@ -29,7 +30,7 @@
                 <option selected>Any</option>
                 <option value="800">800</option>
                 <option value="1200">1200</option>
-                </select>
+                 </select>
             </div>
 			<div class="company-div">
                 <label class="input-group-text" for="inputGroupSelect01">Company</label>
@@ -38,19 +39,20 @@
                 <option value="Samsung">Samsung</option>
                 <option value="Apple">Apple</option>
                 </select>
-            </div>	
-
+       </div>
             
-		</div>
+		</div> 
 
-			<div class="filter">
+			 <div class="filter">
 				<button onclick="filt()" type="button" class="filter-button">Shfaq</button>			
 			</div>
 		
 		<div class="cards" id="tel-cards">
-			<!--cards per shfaqjen e telefonave-->
+		
 		</div>
-	</div>
+	</div> 
+
+  
 
 
     
@@ -92,10 +94,6 @@
       <a href="#up" style="text-decoration: none; color: #0b152cf1;">Back to top</a>
           <a href="#up"><img src="img/arrow.png" width="30px" height="30px" ></a>
       </div>
-    
-  
-
-
 <script type="text/javascript" src="script.js"></script>
 </body>
 </html>

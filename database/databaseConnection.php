@@ -4,7 +4,7 @@ class DatabaseConnection{
     private $server="localhost";
     private $username="root";
     private $password="";
-    private $database="Lokali";
+    private $database="lokali";
 
    
 
@@ -13,7 +13,7 @@ class DatabaseConnection{
             echo "Connection failed";
             return null;
         }else{
-            //echo "Connection successfully";
+            // echo "Connection successfully";
             return $conn;
         }
     }

@@ -1,6 +1,38 @@
-<!-- <?php 
-include_once '../controller/loginController.php';
-?> -->
+ <?php 
+// include_once '../controller/loginController.php';
+
+$host = "localhost";
+$user = "root";
+$password = "";
+$database = "lokali";
+
+$data = mysqli_connect($host,$user,$password,$database);
+
+if($data === false){
+    die("connection failed!");
+}
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $sql = "select * from useri where username = '".$username."' AND password='".$password."' ";
+
+    $result = mysqli_query($data, $sql);
+
+    $row = mysqli_fetch_array($result);
+
+    if($row["usertype"] == "user"){ 
+        header("location:../view/index.php");
+    }
+    elseif($row["usertype"] == "admin"){
+        
+        header("location:../view/Dashboard.php");
+    }
+    else{
+        echo "Username or Password incorrect!";
+    }
+}
+?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,16 +51,20 @@ include_once '../controller/loginController.php';
            
         
            <div class="login-inputs">
-               <form class="form-login" action="<?= $_SERVER['PHP_SELF']?>" method="post">
+               <form class="form-login" action="" method="post">
 
                <h3 style="text-align: center; color: #316B83;">LOG IN</h3>
                <img src="img/memberlogin.jpg" width="70" height="70" style="margin-left: 111px;" ><br>
+
                <label for="username">USERNAME:</label> <br> <br>
                <input type="text" placeholder="Username" name="username" id="username2"> <br> <br> <br>
+
                <label for="password">PASSWORD:</label> <br> <br>
                <input type="password" placeholder="Password" name="password" id="password2"> <br> <br>
+
                <input type="checkbox" onclick="myFunction()"> Show Password <br> <br>
                <input type="submit" value="Log in" name="login" class="loginInput"> <br> <br>
+               
                <input type="checkbox"> <b style="color: #316B83;">Remember me</b>
                <a href="#" style="text-decoration: none; color: rgb(114, 113, 113); padding-left: 59px;">Forgot password?</a>
             </form>
@@ -41,6 +77,8 @@ include_once '../controller/loginController.php';
            <div> <a href="Sign_up.php">Sign up</a> </div>
         </form>
         </div>
+
+
 
 
 

@@ -1,3 +1,6 @@
+<?php 
+include '../controller/signupController.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,38 +18,40 @@
            
     </div>
        <div class="signup-div1">
-       <form id="signup-form"  action="<?= $_SERVER['PHP_SELF']?>" method="post">
+       <form id="signup-form"  action="<?= $_SERVER['PHP_SELF']?>" method="POST">
            <h3 style="margin-bottom: 20px; color: rgb(69, 189, 45); text-align: center; font-weight: bold;">SIGN UP</h3>
 
            <label id="name-label" style="color: rgb(49, 170, 49); font-weight: bold;">Name:</label> <br> <br>
-           <input type="text" placeholder="Name" id="name-input"> <br> 
+           <input type="text" placeholder="Name" id="name-input" name="name" > <br> 
            <label id="emri"></label> <br> <br>
 
            <label id="surname-label" style="color: rgb(49, 170, 49);font-weight: bold;">Surname: </label> <br> <br>
-           <input type="text" placeholder="Surname" id="surname-input"> <br>
+           <input type="text" placeholder="Surname" id="surname-input" name="surname" > <br>
            <label id="mbiemri"></label> <br> <br>
 
            <label id="email-label"  style="color: rgb(49, 170, 49);font-weight: bold;">Email:</label> <br> <br>
-           <input type="email" placeholder="Email" id="email-input">  <br> 
+           <input type="email" placeholder="Email" id="email-input" name="email"  >  <br> 
            <label id="emaili"></label> <br> <br>
 
            <label id="phone-label"  style="color: rgb(49, 170, 49);font-weight: bold;">Phone number</label> <br> <br>
-           <input type="text" placeholder="Phone number" id="phone-input"> <br>
+           <input type="text" placeholder="Phone number" id="phone-input" name="phone" > <br>
            <label id="phoneNr"></label> <br> <br>
 
            <label id="username-label"  style="color: rgb(49, 170, 49);font-weight: bold;">Username:</label> <br> <br>
-           <input type="text" placeholder="Username" id="username-input">  <br> 
+           <input type="text" placeholder="Username" id="username-input" name="username" >  <br> 
            <label id="username"></label> <br> <br>
 
            <label id="password-label"  style="color: rgb(49, 170, 49);font-weight: bold;">Password:</label> <br> <br>
-           <input type="password" id="password-input" placeholder="Password"> <br> 
+           <input type="password" id="password-input" placeholder="Password" name="password" > <br> 
            <label id="pass"></label> <br> <br>
 
            <label id="passwordConfirm-label"  style="color: rgb(49, 170, 49);font-weight: bold;">Confirm password:</label> <br> <br>
-           <input type="password" id="confirmPassword-input" placeholder="Confirm password"><br> 
+           <input type="password" id="confirmPassword-input" placeholder="Confirm password" name="passwordConfirm"><br> 
            <label id="passConfirm"> </label> <br> <br>
 
-           <input type="button" id="submit" name="signupInput" value="Submit" style="width: 160px;margin-left: 52px; color:rgb(49, 170, 49); font-weight: bold;">
+           
+           <!-- <button type="submit" id="submit" name="signupInput" style="width: 160px;margin-left: 52px; color:rgb(49, 170, 49); font-weight: bold;">Sign up</button> -->
+           <input type="submit" id="submit" name="signupInput" style="width: 160px;margin-left: 52px; color:rgb(49, 170, 49); font-weight: bold;">
 
        </form>  
    </div>

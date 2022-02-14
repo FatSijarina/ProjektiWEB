@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +15,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   
     <title>ON-TECH</title>
+
 </head>
 <body>
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
@@ -26,6 +29,8 @@
            <li> <a href="buyonline.php" class="buy-online" >BUY ONLINE</a></li>
            <li><a href="AboutUs.php" class="aboutus">ABOUT US</a></li>
            <li><a href="LogIn.php" class="signup">SIGN UP</a></li>
+         
+           <!-- <a class="<?php echo $hide?>" href="dashboard.php?id=1111">Dashboard</a> -->
         </ul>
         
         <h2 class="title">DISCOVER A WORLD WITHOUT LIMITS</h2>
